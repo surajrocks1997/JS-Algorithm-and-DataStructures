@@ -31,10 +31,24 @@ class HashTable {
       }
     }
     return undefined;
-  } //O(1) but in case of collision(rare) it can be O(n)
+  } //O(1) but in case of collision(rare), it can be O(n)
+
+  keys() {
+    const keysArray = [];
+    for(let i =0; i < this.data.length; i++) {
+      if(this.data[i]){
+        // console.log(this.data[i][0][0]);
+        keysArray.push(this.data[i][0][0]);
+      }
+    }
+    return keysArray;
+  }
 }
 
 const myHashTable = new HashTable(50);
 myHashTable.set("grapes", 10000);
 myHashTable.set("apples", 54);
-console.log(myHashTable.get("apples"));
+myHashTable.set("oranges", 46);
+
+console.log('GET : ' + myHashTable.get("apples"));
+console.log('KEYS : ' + myHashTable.keys());
