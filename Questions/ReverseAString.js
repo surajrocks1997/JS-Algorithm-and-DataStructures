@@ -17,9 +17,8 @@ function reverse2(str) {
   return str.split("").reverse().join("");
 }
 
-function reverse3(str) {
-  return [...str].reverse().join("");
-}
+const reverse3 = (str) => [...str].reverse().join("");
+
 
 const str = "My Name is Anthony";
 
