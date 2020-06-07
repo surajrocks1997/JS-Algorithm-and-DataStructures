@@ -40,3 +40,4 @@ myQueue.dequeue();
 myQueue.dequeue();
 myQueue.dequeue();
 myQueue.peek();
+myQueue.enqueue("Ravi");
